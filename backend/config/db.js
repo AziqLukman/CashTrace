@@ -19,15 +19,18 @@ const pool = mysql.createPool({
   dateStrings: true
 });
 
-// Test connection
-pool.getConnection()
-  .then(connection => {
+// Test connection (don't exit on failure - just log error)
+const testConnection = async () => {
+  try {
+    const connection = await pool.getConnection();
     console.log('Database connected successfully');
     connection.release();
-  })
-  .catch(err => {
-    console.error('Database connection error:', err);
-    process.exit(-1);
-  });
+  } catch (err) {
+    console.error('Database connection error:', err.message);
+    console.log('Server will continue running. Please configure database environment variables.');
+  }
+};
+
+testConnection();
 
 module.exports = pool;
