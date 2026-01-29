@@ -1,0 +1,14 @@
+{
+  "name": "cashtrace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CashTrace - Expense Tracker Application",
+  "scripts": {
+    "start": "node backend/app.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend"
+  }
+}
