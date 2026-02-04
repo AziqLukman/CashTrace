@@ -1,7 +1,7 @@
 {
     "name": "cashtrace-v2",
-    "version": "2.1.0",
-    "description": "Aplikasi CashTrace V2.1.0 - PWA Enabled",
+    "version": "2.1.1",
+    "description": "Aplikasi CashTrace V2.1.1 - Adding Splash Screen",
     "private": true,
     "scripts": {
         "dev:frontend": "cd frontend && npm run dev",
